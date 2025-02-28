@@ -10,7 +10,7 @@ export default ({onChoice}) => {
 
   useEffect(() => {
     fetchCast();
-  });
+  }, []);
 
   return (
     <div style={{
