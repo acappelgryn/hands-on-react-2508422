@@ -1,12 +1,14 @@
-export default ({ member, handleClose }) => {
+export default ({ member, cast, changeMember }) => {
   return (
     <dialog id="modal-member" open>
       <article>
-        <a href="#close"
+        <a
+          style={{marginTop: "2px"}}
+          href="#close"
           aria-label="Close"
           className="close"
           data-target="modal-member"
-          onClick={handleClose}
+          onClick={() => {changeMember(null)}}
         ></a>
         <hgroup>
           <div style={{
@@ -17,6 +19,38 @@ export default ({ member, handleClose }) => {
               src={`images/${member.slug}.svg`}
               alt={member.name} />
             <hgroup>
+              <hgroup style={{position: "relative", minHeight: "60px", marginBottom: "10px"}}>
+                <a
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: "0%",
+                    width: "auto"
+                  }}
+                  className="outline"
+                  href="#"
+                  role="button"
+                  onClick={() => { changeMember(cast[member.prevIndex]) }}
+                >
+                  Previous
+                </a>
+                <a
+                  style={{
+                    paddingLeft: "37px",
+                    paddingRight: "37px",
+                    position: "absolute",
+                    bottom: 0,
+                    left: "70%",
+                    width: "auto"
+                  }}
+                  className="outline"
+                  href="#"
+                  role="button"
+                  onClick={() => { changeMember(cast[member.nextIndex]) }}
+                >
+                  Next
+                </a>
+              </hgroup>
               <h1>{member.name}</h1>
               <p>{member.bio}</p>
             </hgroup>
