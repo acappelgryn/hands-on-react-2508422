@@ -1,5 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Compiled source files
+*.js
+*.map
+
+# Logs and temp files
+*.log
+tmp/
+temp/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Mac files
 .DS_Store
-node_modules
-.tmp
-npm-debug.log
-dist
+
+# Yarn specific
+yarn-error.log
