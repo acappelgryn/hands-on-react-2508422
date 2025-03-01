@@ -20,7 +20,7 @@ export default ({ cast, onChoice }) => {
       <ul>
         <a href="#">
           <img
-            style={{ height: "50px" }}
+            style={{ height: "52.5px", marginRight: "10px" }}
             src="images/logo_bug_stargazers.svg"
             alt="StarGazers Logo"
           />
