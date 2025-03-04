@@ -1,4 +1,4 @@
-import "./Nav.scss"; 
+import "../sass/Nav.scss";
 
 export default ({ cast, onChoice }) => {
   return (
