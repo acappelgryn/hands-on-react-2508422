@@ -1,17 +1,16 @@
-import "./Nav.css";
-
 export default ({ cast, onChoice }) => {
   return (
     <nav className="container">
       <ul>
         <li>
-          <details role="list">
-            <summary aria-haspopup="listbox" role="link">cast</summary>
-            <ul role="listbox">
+          <details className="dropdown">
+            <summary aria-haspopup="listbox">cast</summary>
+            <ul dir="ltl">
               {cast.map(member => (
                 <li key={member.id}>
-                  <a onClick={() => { onChoice(member) }}
-                    data-tooltip={member.name}>{member.name}</a>
+                  <a onClick={() => { onChoice(member) }} data-discover="true" style={{cursor: "pointer"}}>
+                    {member.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -19,7 +18,13 @@ export default ({ cast, onChoice }) => {
         </li>
       </ul>
       <ul>
-        <li><a href="#"><img style={{ height: '50px' }} src="images/logo_bug_stargazers.svg" alt="Stargazers Logo" /></a></li>
+        <a href="#">
+          <img
+            style={{ height: "52.5px", marginRight: "10px" }}
+            src="images/logo_bug_stargazers.svg"
+            alt="StarGazers Logo"
+          />
+        </a>
       </ul>
     </nav>
   )
