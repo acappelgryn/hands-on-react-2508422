@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ListCast from './components/ListCast';
 import Modals from './components/Modals';
 import Nav from './components/Nav';
-import "./App.scss";
+import "./sass/App.scss";
 
 function App() {
   const [cast, setCast] = useState([]);
@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     fetchCast();
-  });
+  }, []);
 
   return (
     <>

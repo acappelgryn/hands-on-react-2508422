@@ -13,9 +13,11 @@ export default ({ member, handleClose, handleChange }) => {
             display: "flex",
             gap: '1rem'
           }}>
-            <img style={{ width: '200px' }}
+            <img
+              style={{ width: '200px' }}
               src={`images/${member.slug}.svg`}
-              alt={member.name} />
+              alt={member.name}
+            />
             <hgroup>
               <h1>{member.name}</h1>
               <p>{member.bio}</p>
